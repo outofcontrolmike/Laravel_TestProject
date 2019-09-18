@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PagesController;
+use Facade\FlareClient\Api;
 use Illuminate\Http\Request;
 
 /*
@@ -16,3 +18,5 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/Projects', 'PagesController@index');
